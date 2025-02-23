@@ -45,6 +45,7 @@
             this.btnCustomerCreate = new System.Windows.Forms.Button();
             this.btnCustomerUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnGetByCustomerId = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,6 +169,7 @@
             this.btnCustomerList.TabIndex = 12;
             this.btnCustomerList.Text = "Listele";
             this.btnCustomerList.UseVisualStyleBackColor = false;
+            this.btnCustomerList.Click += new System.EventHandler(this.btnCustomerList_Click);
             // 
             // btnCustomerDelete
             // 
@@ -180,6 +182,7 @@
             this.btnCustomerDelete.TabIndex = 13;
             this.btnCustomerDelete.Text = "Sil";
             this.btnCustomerDelete.UseVisualStyleBackColor = false;
+            this.btnCustomerDelete.Click += new System.EventHandler(this.btnCustomerDelete_Click);
             // 
             // btnCustomerCreate
             // 
@@ -205,6 +208,7 @@
             this.btnCustomerUpdate.TabIndex = 15;
             this.btnCustomerUpdate.Text = "Güncelle";
             this.btnCustomerUpdate.UseVisualStyleBackColor = false;
+            this.btnCustomerUpdate.Click += new System.EventHandler(this.btnCustomerUpdate_Click);
             // 
             // dataGridView1
             // 
@@ -215,11 +219,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(646, 434);
             this.dataGridView1.TabIndex = 16;
             // 
+            // btnGetByCustomerId
+            // 
+            this.btnGetByCustomerId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnGetByCustomerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGetByCustomerId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGetByCustomerId.Location = new System.Drawing.Point(187, 351);
+            this.btnGetByCustomerId.Name = "btnGetByCustomerId";
+            this.btnGetByCustomerId.Size = new System.Drawing.Size(203, 29);
+            this.btnGetByCustomerId.TabIndex = 17;
+            this.btnGetByCustomerId.Text = "ID ye Göre getir";
+            this.btnGetByCustomerId.UseVisualStyleBackColor = false;
+            this.btnGetByCustomerId.Click += new System.EventHandler(this.btnGetByCustomerId_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 450);
+            this.Controls.Add(this.btnGetByCustomerId);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCustomerUpdate);
             this.Controls.Add(this.btnCustomerCreate);
@@ -264,6 +282,7 @@
         private System.Windows.Forms.Button btnCustomerCreate;
         private System.Windows.Forms.Button btnCustomerUpdate;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnGetByCustomerId;
     }
 }
 

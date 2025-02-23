@@ -29,10 +29,10 @@ namespace CSharpEgitimKampi601.Services
         }
         public List<Customer> GetAllCustomer()
         {
-            var connection = new MongoDbConnection();
-            var customerCollection = connection.GetCustomersCollection();
-            var customers = customerCollection.Find(new BsonDocument()).ToList();
-            List<Customer> customerList = new List<Customer>();
+            var connection = new MongoDbConnection();/// mongo db ye bağlanıyoruz
+            var customerCollection = connection.GetCustomersCollection(); /// tabloya bağlanıyoruz
+            var customers = customerCollection.Find(new BsonDocument()).ToList();/// tablodaki verileri customers değişkeni içine atıyoruz
+            List<Customer> customerList = new List<Customer>(); /// bellekte boş bir customer listesi oluşturuyoruz
             foreach (var c in customers)
             {
                 customerList.Add(new Customer
